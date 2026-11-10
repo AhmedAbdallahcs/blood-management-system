@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             label1 = new Label();
             label2 = new Label();
             txtusername = new TextBox();
             txtpassword = new TextBox();
             btnlogin = new Button();
+            errorProvider1 = new ErrorProvider(components);
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -59,6 +62,7 @@
             txtusername.Name = "txtusername";
             txtusername.Size = new Size(125, 27);
             txtusername.TabIndex = 2;
+            txtusername.TextChanged += txtusername_TextChanged;
             // 
             // txtpassword
             // 
@@ -66,6 +70,7 @@
             txtpassword.Name = "txtpassword";
             txtpassword.Size = new Size(125, 27);
             txtpassword.TabIndex = 3;
+            txtpassword.TextChanged += txtpassword_TextChanged;
             // 
             // btnlogin
             // 
@@ -77,6 +82,10 @@
             btnlogin.Text = "Login";
             btnlogin.UseVisualStyleBackColor = true;
             btnlogin.Click += btnlogin_Click;
+            // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
             // 
             // login
             // 
@@ -90,6 +99,7 @@
             Controls.Add(label1);
             Name = "login";
             Text = "login";
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -101,5 +111,6 @@
         private TextBox txtusername;
         private TextBox txtpassword;
         private Button btnlogin;
+        private ErrorProvider errorProvider1;
     }
 }
