@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
             label1 = new Label();
             label2 = new Label();
             txtusername = new TextBox();
@@ -86,6 +87,7 @@
             // errorProvider1
             // 
             errorProvider1.ContainerControl = this;
+            errorProvider1.Icon = (Icon)resources.GetObject("errorProvider1.Icon");
             // 
             // login
             // 
